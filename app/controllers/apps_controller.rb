@@ -4,7 +4,7 @@ class AppsController < ApplicationController
     @users = User.all
   end
   def recherche
-    @users = User.all
+    @users = User.order(:updated_at).reverse
   end
    
 end

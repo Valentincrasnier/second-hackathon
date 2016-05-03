@@ -1,5 +1,9 @@
 <%= link_to "Deco", destroy_user_session_path, method: :delete %>
 <br/>
-<%= current_user.pseudo %>
-<%= current_user.birthday %>
-<%= getSex(current_user) %>
+<br/>
+
+  <% @users.each do |user| %>
+    <%= user.pseudo %><br />
+    <%= user.birthday %><br />
+    <%= user.sex %><br /><br />
+  <% end %>
