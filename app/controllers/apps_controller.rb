@@ -1,14 +1,10 @@
 class AppsController < ApplicationController
+  
   def index
+    @users = User.all
   end
-
-  def create
-  	user = current_user
-  	if user == 1
-  		redirect_to root_index
-  	else
-  		render :new
-  	end
+  def recherche
+    @users = User.all
   end
-
+   
 end
