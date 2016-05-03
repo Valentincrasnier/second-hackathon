@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   #get 'apps/index'
 
   root 'apps#index'
+  resources :users do
+    resources :challenges, only: [:new, :create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

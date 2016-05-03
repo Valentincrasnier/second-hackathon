@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def get_age
+    (DateTime.now.to_i - self.birthday.to_datetime.to_i) / (60*60*24*365)
+  end
 end

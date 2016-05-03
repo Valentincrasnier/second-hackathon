@@ -1,0 +1,10 @@
+<h1>Défié</h1>
+
+<%= render 'challenges/info_user' %>
+
+<%= form_for @challenge, url: user_challenges_path(user_id: @user.id) do |f| %>
+  
+  <%= f.label 'description' %>
+  <%= f.text_area :description, placeholder: 'Cap ou pas cap...' %>
+  <%= f.submit 'Envoyer' %>
+<% end %>
