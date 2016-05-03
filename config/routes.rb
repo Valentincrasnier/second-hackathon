@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  #get 'apps/index'
 
-  root 'apps#index'
+  root 'apps#recherche'
+
   resources :users do
     resources :challenges, only: [:new, :create]
   end

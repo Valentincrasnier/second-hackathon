@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503125530) do
+ActiveRecord::Schema.define(version: 20160503145145) do
 
   create_table "challenges", force: :cascade do |t|
     t.string   "description"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20160503125530) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "pseudo"
-    t.boolean  "sex"
     t.datetime "birthday"
+    t.string   "sex"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
