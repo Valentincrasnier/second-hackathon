@@ -14,8 +14,6 @@
  *= require_tree .
  *= require_self
  */
- 
- */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -24,5 +22,11 @@
 .navbar
 {
   border-radius: 0%;
+
+  .navbar-collapse
+  {
+    text-align: center;
+  }
 }
+
 
