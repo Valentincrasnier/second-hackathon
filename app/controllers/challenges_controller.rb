@@ -13,4 +13,9 @@ class ChallengesController < ApplicationController
     end
   end
 
+  def show
+    @challenges = Challenge.all
+    @users = User.all
+  end
+
 end

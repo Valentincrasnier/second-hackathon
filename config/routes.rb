@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'apps#recherche'
 
   resources :users do
-    resources :challenges, only: [:new, :create]
+    resources :challenges
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
