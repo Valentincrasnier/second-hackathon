@@ -1,0 +1,19 @@
+<% @challenges.each do |challenge| %>
+	<% @users.each do |user| %>
+		<% tab = challenge.author_id %>
+		<% if user.id == tab %>
+			Le joueur <%= user.pseudo %><br />
+			<%= user.birthday %><br />
+    		<%= user.sex %><br /> vous a envoyé un défi!<br /><br />
+		<% end %>
+	<% end %>
+	Défi: <br />
+	<%= challenge.description %><br /><br />
+	<%= button_to "Accept", root_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+	<%= button_to "Deny", root_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+<br />
+<% end %>
+<br />
+<br />
