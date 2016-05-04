@@ -1,11 +1,11 @@
 class ChallengesController < ApplicationController
   def new
     @challenge = Challenge.new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
   end
 
   def create
-    @challenge = Challenge.new(description: params[:challenge][:description], author_id: current_user.id, user_id: params[:user_id])
+    @challenge = Challenge.new(description: params[:challenge][:description], author_id: current_user.id, user_id: params[:id])
     if @challenge.save
       redirect_to root_path
     else
@@ -13,9 +13,14 @@ class ChallengesController < ApplicationController
     end
   end
 
-  def show
-    @challenges = Challenge.all
-    @users = User.all
+  def index
+    @user = User.find(params[:id])
+    @challenges = Challenge.where(user_id: params[:id])
   end
 
+  def delete
+    @challenge = Challenge.find(params[:challId])
+    @challenge.destroy
+    redirect_to root_path
+  end
 end

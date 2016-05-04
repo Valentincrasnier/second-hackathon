@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
   root 'apps#recherche'
 
-  resources :users do
-    resources :challenges
-  end
+  resources :users
+
+  get "user/:id/challenges" => "challenges#index", as: :user_challenges
+  get "user/:id/new_challenges" => "challenges#new", as: :user_new_challenge
+  post "user/:id/challenges" => "challenges#create", as: :user_create_challenge
+  delete "user/:id/challenges" => "challenges#delete", as: :defi_delete
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
