@@ -16,9 +16,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "challenges";
+@import "apps";
 
-.navbar
-{
-  border-radius: 0%;
+@media screen and (max-width: 500px) {
+
 }
 
+.rech {
+	text-align: center;
+	margin: 30px;
+}
