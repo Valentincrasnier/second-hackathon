@@ -19,8 +19,17 @@ class ChallengesController < ApplicationController
   end
 
   def delete
-    @challenge = Challenge.find(params[:challId])
+    if params[:verife] == "accept"
+      if current_user.scrore == nil
+        current_user.scrore = 0
+      end
+      current_user.scrore += 10
+      current_user.save
+    end
+    @challenge = Challenge.find(params[:id])
     @challenge.destroy
     redirect_to root_path
+
+
   end
 end

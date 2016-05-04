@@ -1,7 +1,7 @@
 <% @challenges.each do |challenge| %>
 	<%= User.find(challenge.author_id).pseudo %><br />
 	<%= challenge.description %><br />
-<%= button_to "Accept", defi_delete_path, params: {challId: challenge.id}, :id => "open-contacts-dialog-btn", :class => "inbox-sf-add-btn tip", :method => :delete %>
-<%= button_to "Deny", defi_delete_path, params: {challId: challenge.id}, :id => "open-contacts-dialog-btn",
-      :class => "inbox-sf-add-btn tip", :method => :delete %>
+	<%= button_to "Accept", defi_delete_path(challenge.id, verife: "accept"), :class => "btn btn-success", :method => :delete %>
+	<%= button_to "Deny", defi_delete_path(challenge.id, verife: "deny"), 
+      :class => "btn btn-danger", :method => :delete %>
 <% end %>
