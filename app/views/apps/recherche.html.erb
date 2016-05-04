@@ -1,15 +1,19 @@
 <div class="rech">
-	<% @users.each do |user| %>
-		<% if user != current_user %>
+  <% @users.each do |user| %>
+    <% if user != current_user %>
       <div class="row">
-        <div class="col-xs-6">
-        	<%= user.pseudo %><br />
-        	<%= user.get_age %> ans<br />
-        	<%= user.sex %><br />
-			    <%= user.scrore or 0 %>
-          <%= link_to "Défi", user_new_challenge_path(user.id) %>
-	  <% end %>
-	<% end %>
+        <div class="machin col-xs-6">
+          <%= user.pseudo %><br />
+          <%= user.get_age %> ans<br />
+          <%= user.sex %><br /><br />
         </div>
+        <div class="machin col-xs-6">
+			    score : <%= user.scrore or 0 %><br />
+         <%= link_to "Défi", user_new_challenge_path(user.id), class: "btn btn-danger btn-defi" %><br /><br />
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
         
-Score = <%= current_user.scrore or 0 %>
+<!-- Score = <%= current_user.scrore or 0 %> -->

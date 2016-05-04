@@ -11,18 +11,72 @@ h1
 
 .ensemble
 {
-  margin-top: 5%;
+  margin-top: 2%;
+  text-align: center;
 
-
+  .utilisateur
+  {
+    font-size: 20px;
+  }
   label
   {
     font-size: 30px;
-    display: flex;
+    text-align: center;
   }
 
   textarea
   {
-    display: flex;
+    text-align: center;
     resize: none;
   }
 }
+
+.rech 
+{
+
+  .row
+  {
+    border: 1px solid lightgrey;
+    border-radius: 2%;
+    margin-bottom: 5%;
+    
+    .machin
+    {
+      font-size: 2rem;
+      margin-top: 7%;
+    }
+
+  }
+
+  .btn-defi
+  {
+    width: 70%;
+    height: 32px;
+    font-size: 14px;
+    margin-top: 10%;
+  }
+}
+
+.index
+{
+  text-align: center;
+  border: 1px solid lightgrey;
+  border-radius: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 7%;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  font-size: 2rem;
+
+  h3
+  {
+    margin-top: 0;
+  }
+
+  .chut
+  {
+    margin-top: 5%;
+  }
+}
+
