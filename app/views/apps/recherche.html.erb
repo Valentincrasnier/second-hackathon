@@ -6,10 +6,16 @@
         	<%= user.pseudo %><br />
         	<%= user.get_age %> ans<br />
         	<%= user.sex %><br />
-			    <%= user.scrore or 0 %>
-          <%= link_to "Défi", user_new_challenge_path(user.id) %>
-	  <% end %>
-	<% end %>
+			     <%= user.scrore or 0 %>
+        <div class="col-xs-6">
+         <%= link_to "Défi", user_new_challenge_path(user.id), class: "btn btn-danger btn-defi" %><br /><br />
         </div>
+    <% end %>
+  <% end %>
+        </div>
+      </div>
+      <!-- </div> -->
         
+</div>
+
 Score = <%= current_user.scrore or 0 %>
