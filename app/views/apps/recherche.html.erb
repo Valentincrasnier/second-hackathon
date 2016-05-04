@@ -4,7 +4,10 @@
 	    	<%= user.pseudo %><br />
 	    	<%= user.birthday %><br />
 	    	<%= user.sex %><br />
+			<%= user.scrore or 0 %>
 	    	<%= link_to "Défi", user_new_challenge_path(user.id) %>
 	  <% end %>
 	<% end %>
 </div>
+
+Score = <%= current_user.scrore or 0 %>
