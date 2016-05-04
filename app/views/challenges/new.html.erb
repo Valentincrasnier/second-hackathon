@@ -1,14 +1,14 @@
 <h1>Défié</h1>
 <div class= "container">
   <div class= "row ensemble">
-    <div class= "col-xs-3 col-xs-ofsset-5">
+    <div class= "col-xs-12">
       <div class= "utilisateur">
         <%= render 'challenges/info_user' %>
       </div>
         <%= form_for @challenge, url: user_challenges_path(user_id: @user.id) do |f| %>
           
           <%= f.label 'description' %>
-          <%= f.text_area :description, placeholder: 'Cap ou pas cap...', size: '60x10' %>
+          <%= f.text_area :description, placeholder: 'Cap ou pas cap...', size: '30x7' %>
           <%= f.submit 'Envoyer' %>
 
         <% end %>

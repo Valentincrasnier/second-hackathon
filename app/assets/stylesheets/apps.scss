@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.rech {
-	width: 22%;
+.rech 
+{
+  font-size: 3rem;
+
+  .btn-defi
+  {
+    width: 70%;
+    height: 32px;
+    font-size: 14px;
+  }
 }
