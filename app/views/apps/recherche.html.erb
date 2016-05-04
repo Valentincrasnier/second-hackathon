@@ -1,10 +1,11 @@
- <div class="rech">
-	 <% @users.each do |user| %>
+<div class="rech">
+	<% @users.each do |user| %>
 		<% if user != current_user %>
-	    	<%= user.pseudo %><br />
-	    	<%= user.birthday %><br />
-	    	<%= user.sex %><br />
-	    	<%= link_to "Défi", user_new_challenge_path(user.id) %>
+    	<%= user.pseudo %><br />
+    	<%= user.get_age %> ans<br />
+    	<%= user.sex %><br />
+    	<%= link_to "Défi", user_new_challenge_path(user.id) %>
 	  <% end %>
 	<% end %>
 </div>
+

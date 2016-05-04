@@ -11,8 +11,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require_tree .
- *= require_self 
+ *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "challenges";
@@ -20,9 +21,21 @@
 
 @media screen and (max-width: 500px) {
 
+
 }
 
 .rech {
 	text-align: center;
 	margin: 30px;
 }
+
+.navbar
+{
+  border-radius: 0%;
+
+  .navbar-collapse
+  {
+    text-align: center;
+  }
+}
+

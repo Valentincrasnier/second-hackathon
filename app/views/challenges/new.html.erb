@@ -1,10 +1,17 @@
 <h1>Défié</h1>
+<div class= "container">
+  <div class= "row ensemble">
+    <div class= "col-xs-3 col-xs-ofsset-5">
+      <div class= "utilisateur">
+        <%= render 'challenges/info_user' %>
+      </div>
+        <%= form_for @challenge, url: user_challenges_path(user_id: @user.id) do |f| %>
+          
+          <%= f.label 'description' %>
+          <%= f.text_area :description, placeholder: 'Cap ou pas cap...', size: '60x10' %>
+          <%= f.submit 'Envoyer' %>
 
-<%= render 'challenges/info_user' %>
-
-<%= form_for @challenge, url:  user_create_challenge_path() do |f| %>
-  
-  <%= f.label 'description' %>
-  <%= f.text_area :description, placeholder: 'Cap ou pas cap...' %>
-  <%= f.submit 'Envoyer' %>
-<% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
