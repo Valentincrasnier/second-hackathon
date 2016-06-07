@@ -29,7 +29,5 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
     @challenge.destroy
     redirect_to root_path
-
-
   end
 end
